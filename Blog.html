@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <!--inside the head, attach all the exteral links-->
+    <!-- we are linking it to css , java script , bootstrap 4-->
+    <!-- because we are using a lot of bootstrap, styling codes-->
+    <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<!-- Popper JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+
+<!--for a responsive website-->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- Add icon library -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<!--CSS for navbar-->
+<style>
+
+    .navbar-brand {
+        color: #fff;
+        font-size:25px;
+      font-family: 'Gentium Basic', serif;
+        font-weight:400;
+        letter-spacing:0.1em;
+    }
+    
+    .navbar-nav .nav-item .nav-link{
+        padding: 2em 2em !important;
+        font-size: 100%;
+        font-weight: 500;
+        letter-spacing:4px;
+        color:black;
+       font-family: 'Arial', sans-serif;
+    
+    }
+    .navbar-nav .nav-item .nav-link:hover{color: gainsboro;}
+    .navbar-expand-md .navbar-nav .dropdown-menu{
+        border-top:3px solid black;
+    }
+    
+    .shrink {
+        padding-top: 0;
+        padding-bottom: 0;
+        background-color:white;
+    }
+    
+    .text-intro{
+        width:90%;
+        margin:auto;
+        text-align:center;
+        padding-top:30px;
+    }
+    
+    
+    /* mobile view */
+    @media (max-width:500px)
+    {
+        .navbar-nav{
+            background-color:#000;
+            border-top:3px solid #fed136;
+            color:#fff;
+            z-index:1;
+            margin-top:5px;
+            }
+        .navbar-nav .nav-item .nav-link{
+        padding: 0.7em 1em!important;
+        font-size: 100%;
+        font-weight: 500;
+        }
+    
+    }
+    
+    @media (max-width:768px){
+        .banner-text{
+        padding:150px 0 150px 0;
+    }
+        .banner-sub-heading{
+        font-size: 23px;
+        font-weight: 200;
+        line-height: 23px;
+        margin-bottom: 40px;
+    }
+    }
+    .about-section {
+  padding: 50px;
+  text-align: center;
+  background-color:black;
+  color: white;
+}
+    </style>
+
+    
+      <!--CSS blog-->
+
+<style>
+
+* {
+  box-sizing: border-box;
+}
+
+/* Header/Blog Title */
+.header {
+  padding: 30px;
+  font-size: 72px;
+  text-align: center;
+  background: black;
+  color:white;
+}
+
+/* Create two unequal columns that floats next to each other */
+/* Left column */
+
+.leftcolumn {
+  float: left;
+  width: 70%;
+}
+
+/* Right column */
+.rightcolumn {
+  float: left;
+  width: 30%;
+  padding-left: 20px;
+}
+
+
+
+/* Add a card effect for articles */
+.card {
+  background-color: white;
+  padding: 20px;
+  margin-top: 20px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Footer */
+.footer {
+  padding: 20px;
+  text-align: center;
+  background: #ddd;
+  margin-top: 20px;
+}
+
+/* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 800px) {
+  .leftcolumn, .rightcolumn {
+    width: 100%;
+    padding: 0;
+  }
+}
+
+/* right column contact */
+.card1 {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  max-width: 300px;
+  margin: auto;
+  text-align: center;
+}
+
+.title1 {
+  color: grey;
+  font-size: 18px;
+}
+
+button {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+  font-size: 18px;
+}
+
+a {
+  text-decoration: none;
+  font-size: 22px;
+  color: black;
+}
+
+button:hover, a:hover {
+  opacity: 0.7;
+}
+</style>
+    </style>
+
+    <!-- Javascript code for navbar-->
+<script>
+    $(document).on("scroll", function(){
+      if
+    ($(document).scrollTop() > 86){
+        $("#banner").addClass("shrink");
+      }
+      else
+      {
+          $("#banner").removeClass("shrink");
+      }
+  });
+</script>
+
+<!--Navbar will be inside head-->
+<nav class="navbar navbar-expand-lg navbar-light fixed-top" id="banner">
+	<div class="container-fluid">
+  
+    <!-- Brand -->
+  <a class="navbar-brand" href="index.html"><span>CCan</span> Photography.</a>
+
+  <!-- Toggler/collapsibe Button -->
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <!-- Navbar links -->
+  <div class="collapse navbar-collapse" id="collapsibleNavbar">
+    <ul class="navbar-nav container-xl">
+      <li class="nav-item">
+        <a class="nav-link" href="index.html">HOME</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="Blog.html">BLOG</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="Gallery.html">GALLERY</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="About.html">ABOUT US</a>
+      </li> 
+      <li class="nav-item">
+        <a class="nav-link" href="Contact.html">CONTACT</a>
+      </li> 
+    </ul>
+  </div>
+	</div>
+</nav>
+
+
+  </head>
+
+  <body>
+    <br>
+    <br>
+    <br>
+    <br>
+    <section>
+      <div class="header">
+        <h2>My Blog</h2>
+      </div>
+      
+      <div class="container">
+      <div class="row mx-auto">
+        
+        <div class="leftcolumn">
+          
+          <div class="card">
+            <h2>CONCEPT TO CREATION</h2>
+            <h5>EDITORIAL VERSUS CAMPAINGN, Dec 7, 2017</h5>
+            <img src="Images/1.jpg" style="width: 100%;" alt="The Girl">
+            <p>Thanks for joining us on our “Concept to Creation” series where we walk you through the process of taking an idea into an image. 
+              If you were here with us last time, we investigated examples of how working fashion photographers in the industry turn their inspirations into a concepts.</p>
+            </div>
+            
+          <div class="card">
+            <h2>What inspired you to start a career in photography?</h2>
+            <h5>Natural Beauty, Sep 2, 2017</h5>
+           <img  src="Images/2.jpg" style="width:100%"  alt="The Girl">
+           <p>My fascination for fashion photography started at an early age. 
+            At the age of 13 I captured the adventures of our dog with a compact 
+            camera and I loved to take a lot of photos during each walk at the beach or woods. 
+            Soon I was looking at the lifestyle magazines of my mother and I wanted to create 
+            the fashion editorials myself, so I asked my younger sister to be my model. I noticed 
+            that I enjoyed to capture people instead of animals and nature. Finally I discovered 
+            something that really has my interest and since I started to buy fashion magazines 
+            like Vogue, Elle and Glamour. I knew I wanted to be a fashion photographer as well, 
+            no matter what. And I’m so happy did! I love to work with a creative team and to 
+            capture stories. Fashion and photography is a really fun combination and it feels 
+            great to share this passion with so many other people around the world.</p>
+          </div>
+          </div>
+       
+        <div class="rightcolumn">
+          <div class="card">
+            <h2>About Us</h2>
+           <img src="Images/3.jpg" style="width:100%" alt="The Girl">
+            <p>Some text about me in culpa qui officia deserunt mollit anim..</p>
+          </div>
+          
+          <div class="card">
+            <h3>Popular Post</h3>
+            <img src="Images/4.jpg" style="width:100%" alt="The Girl">
+            <img src="Images/5.jpg" style="width:100%" alt="The Girl">
+            <img src="Images/6.jpg" style="width:100%" alt="The Girl">
+            </div>
+          
+          <br>
+          <br>
+          <br>
+          <div class="card1">
+            <h3>Follow Us</h3>
+            <p></p>
+            <p class="title1">CEO & Founder</p>
+    
+      <a href="#"><i class="fa fa-google"></i></a>
+      <a href="#"><i class="fa fa-instagram"></i></a>
+      <a href="#"><i class="fa fa-youtube"></i></a>
+      <a href="#"><i class="fa fa-facebook"></i></a>
+      <br>
+      <br>
+      <p><button  onclick="window.location.href='Contact.html';">Contact</button></p>
+          </div>
+        </div>
+      </div>
+    </div>
+    </section>
+
+    <!-- Footer -->
+    <section>
+      <style>
+        .footer {
+          position:sticky;
+          left: 0;
+          bottom:0;
+          width: 100%;
+          background-color: black;
+          color: white;
+          text-align: center;
+          padding-top: 30px;
+          padding-bottom: 30px;
+        }
+        </style>
+        
+        <!-- css code for social media buttons -->
+        
+        <div class="footer">
+          <p style="text-align: center;">All right reserved. Copy right 2020</p>
+        
+        <style>
+        .fa {
+          padding: 15px;
+          font-size:20px;
+          width:60px;
+          text-align: center;
+          text-decoration: none;
+          margin: 5px 5px;
+          
+        }
+        
+        .fa:hover {
+            opacity: 0.7;
+        }
+        
+        .fa-facebook {
+          background: #3B5998;
+          color: white;
+        }
+        
+        .fa-google {
+          background: #dd4b39;
+          color: white;
+        }
+        
+        .fa-youtube {
+          background: #bb0000;
+          color: white;
+        }
+        
+        .fa-instagram {
+          background: #125688;
+          color: white;
+        }
+        
+        </style>
+        <!-- html code for social media -->
+        <!-- Add font awesome icons -->
+        <a href="#" class="fa fa-facebook"></a>
+        <a href="#" class="fa fa-google"></a>
+        <a href="#" class="fa fa-youtube"></a>
+        <a href="#" class="fa fa-instagram"></a>
+        
+        </div>
+            
+        </section>
+
+
+  </body>
+</html>

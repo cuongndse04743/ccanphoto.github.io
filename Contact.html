@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <!--inside the head, attach all the exteral links-->
+    <!-- we are linking it to css , java script , bootstrap 4-->
+    <!-- because we are using a lot of bootstrap, styling codes-->
+    <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<!-- Popper JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+
+<!--for a responsive website-->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- Add icon library -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<!--CSS for navbar-->
+<style>
+
+    .navbar-brand {
+        color: #fff;
+        font-size:25px;
+      font-family: 'Gentium Basic', serif;
+        font-weight:400;
+        letter-spacing:0.1em;
+    }
+    
+    .navbar-nav .nav-item .nav-link{
+        padding: 2em 2em !important;
+        font-size: 100%;
+        font-weight: 500;
+        letter-spacing:4px;
+        color:black;
+       font-family: 'Arial', sans-serif;
+    
+    }
+    .navbar-nav .nav-item .nav-link:hover{color: gainsboro;}
+    .navbar-expand-md .navbar-nav .dropdown-menu{
+        border-top:3px solid black;
+    }
+    
+    .shrink {
+        padding-top: 0;
+        padding-bottom: 0;
+        background-color:white;
+    }
+    
+    .text-intro{
+        width:90%;
+        margin:auto;
+        text-align:center;
+        padding-top:30px;
+    }
+    
+    
+    /* mobile view */
+    @media (max-width:500px)
+    {
+        .navbar-nav{
+            background-color:#000;
+            border-top:3px solid #fed136;
+            color:#fff;
+            z-index:1;
+            margin-top:5px;
+            }
+        .navbar-nav .nav-item .nav-link{
+        padding: 0.7em 1em!important;
+        font-size: 100%;
+        font-weight: 500;
+        }
+    
+    }
+    
+    @media (max-width:768px){
+        .banner-text{
+        padding:150px 0 150px 0;
+    }
+        .banner-sub-heading{
+        font-size: 23px;
+        font-weight: 200;
+        line-height: 23px;
+        margin-bottom: 40px;
+    }
+    }
+
+    .about-section {
+  padding: 50px;
+  text-align: center;
+  background-color:black;
+  color: white;
+}
+    </style>
+
+    <!-- Javascript code for navbar-->
+<script>
+    $(document).on("scroll", function(){
+      if
+    ($(document).scrollTop() > 86){
+        $("#banner").addClass("shrink");
+      }
+      else
+      {
+          $("#banner").removeClass("shrink");
+      }
+  });
+</script>
+
+<!--Navbar will be inside head-->
+<nav class="navbar navbar-expand-lg navbar-light fixed-top" id="banner">
+	<div class="container-fluid">
+  
+    <!-- Brand -->
+  <a class="navbar-brand" href="index.html"><span>CCan</span> Photography.</a>
+
+  <!-- Toggler/collapsibe Button -->
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <!-- Navbar links -->
+  <div class="collapse navbar-collapse" id="collapsibleNavbar">
+    <ul class="navbar-nav container-xl">
+      <li class="nav-item">
+        <a class="nav-link" href="index.html">HOME</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="Blog.html">BLOG</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="Gallery.html">GALLERY</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="About.html">ABOUT US</a>
+      </li> 
+      <li class="nav-item">
+        <a class="nav-link" href="Contact.html">CONTACT</a>
+      </li> 
+    </ul>
+  </div>
+	</div>
+</nav>
+
+</head>
+<body>
+  <br>
+  <br>
+  <br>
+  <br>
+  <section>
+    <div class="about-section">
+    <h1>Contact Us</h1>
+      <p>YOU'VE  MADE IT TO STEP ONE TO BOOK WITH ME, YASSSSSS! 
+        I would love to hear from your beautiful face and get to know YOU. 
+        Here is where you can connect your ideas with me on what you could like to create, 
+        the memories I can capture, and the fun that is ahead.</p>
+      <p>Plese contact us right now for detail.</p>
+    </div>
+    
+    <br>
+    <div class="container">
+    <form action="action_page.php">
+      
+          <label for="fname">Email</label>
+          <input type="text" id="Email" name="Email" placeholder="Your email..">
+  
+          <label for="fname">First Name</label>
+          <input type="text" id="fname" name="firstname" placeholder="Your name..">
+      
+          <label for="lname">Last Name</label>
+          <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+      
+          <label for="country">Country</label>
+          <select id="country" name="country">
+            <option value="australia">Australia</option>
+            <option value="canada">Canada</option>
+            <option value="Vietnam">Vietnam</option>
+            <option value="China">China</option>
+            <option value="USA">USA</option>
+          </select>
+      
+          <label for="subject">Subject</label>
+          <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+      
+          <input type="submit" class="block" value="Submit">
+        
+        </form>
+        </div>
+        
+  </section>
+    <!--Css Contact Us-->
+   <!-- css code for CONTACT US -->
+   <style>
+    /* Style inputs with type="text", select elements and textareas */
+  input[type=text], select, textarea {
+  width: 100%; /* Full width */
+  padding: 12px; /* Some padding */ 
+  border: 1px solid #ccc; /* Gray border */
+  border-radius: 4px; /* Rounded borders */
+  box-sizing: border-box; /* Make sure that padding and width stays in place */
+  margin-top: 6px; /* Add a top margin */
+  margin-bottom: 16px; /* Bottom margin */
+  resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
+  }
+  
+  /* Style the submit button with a specific background color etc */
+  input[type=submit] {
+  background-color: black;
+  color: white;
+  padding: 14px 28px;
+  border: none;
+  cursor: pointer;
+  display: block;
+  width: 100%;
+  }
+  
+  /* When moving the mouse over the submit button, add a darker green color */
+  input[type=submit]:hover {
+  background-color:gray;
+  }
+  
+  /* Add a background color and some padding around the form */
+  .container {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 30px;
+  }
+  </style>
+<br>
+<br>
+    <!-- Footer -->
+    <section>
+      <style>
+        .footer1 {
+          position:sticky;
+          left: 0;
+          bottom:0;
+          width: 100%;
+          background-color: black;
+          color: white;
+          text-align: center;
+          padding-top: 30px;
+          padding-bottom: 30px;
+        }
+        </style>
+        
+        <!-- css code for social media buttons -->
+        
+        <div class="footer1">
+          <p style="text-align: center;">All right reserved. Copy right 2020</p>
+        
+        <style>
+        .fa {
+          padding: 15px;
+          font-size:20px;
+          width:60px;
+          text-align: center;
+          text-decoration: none;
+          margin: 5px 5px;
+          
+        }
+        
+        .fa:hover {
+            opacity: 0.7;
+        }
+        
+        .fa-facebook {
+          background: #3B5998;
+          color: white;
+        }
+        
+        .fa-google {
+          background: #dd4b39;
+          color: white;
+        }
+        
+        .fa-youtube {
+          background: #bb0000;
+          color: white;
+        }
+        
+        .fa-instagram {
+          background: #125688;
+          color: white;
+        }
+        
+        </style>
+        <!-- html code for social media -->
+        <!-- Add font awesome icons -->
+        <a href="#" class="fa fa-facebook"></a>
+        <a href="#" class="fa fa-google"></a>
+        <a href="#" class="fa fa-youtube"></a>
+        <a href="#" class="fa fa-instagram"></a>
+        
+        </div>
+        </section>
+
+</body>
+</html>

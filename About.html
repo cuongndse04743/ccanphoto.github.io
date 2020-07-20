@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <!--inside the head, attach all the exteral links-->
+    <!-- we are linking it to css , java script , bootstrap 4-->
+    <!-- because we are using a lot of bootstrap, styling codes-->
+    <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<!-- Popper JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+
+<!--for a responsive website-->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- Add icon library -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<!--CSS for navbar-->
+<style>
+
+    .navbar-brand {
+        color:black;
+        font-size:25px;
+      font-family: 'Gentium Basic', serif;
+        font-weight:400;
+        letter-spacing:0.1em;
+    }
+    
+    .navbar-nav .nav-item .nav-link{
+        padding: 2em 2em !important;
+        font-size: 100%;
+        font-weight: 500;
+        letter-spacing:4px;
+        color:black;
+       font-family: 'Arial', sans-serif;
+    }
+    .navbar-nav .nav-item .nav-link:hover{color: gainsboro;}
+    .navbar-expand-md .navbar-nav .dropdown-menu{
+        border-top:3px solid black;
+    }
+    
+    .shrink {
+        padding-top: 0;
+        padding-bottom: 0;
+        background-color:white;
+    }
+    
+    .text-intro{
+        width:90%;
+        margin:auto;
+        text-align:center;
+        padding-top:30px;
+    }
+    
+    
+    /* mobile view */
+    @media (max-width:500px)
+    {
+        .navbar-nav{
+            background-color:#000;
+            border-top:3px solid #fed136;
+            color:#fff;
+            z-index:1;
+            margin-top:5px;
+            }
+        .navbar-nav .nav-item .nav-link{
+        padding: 0.7em 1em!important;
+        font-size: 100%;
+        font-weight: 500;
+        }
+    
+    }
+    
+    @media (max-width:768px){
+        .banner-text{
+        padding:150px 0 150px 0;
+    }
+        .banner-sub-heading{
+        font-size: 23px;
+        font-weight: 200;
+        line-height: 23px;
+        margin-bottom: 40px;
+    }
+    }
+    </style>
+
+<!-- Css For About Us-->
+<style>
+    body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+.column {
+  float: left;
+  width: 33.3%;
+  margin-bottom: 16px;
+  padding: 0 8px;
+}
+
+.card {
+  background-color: white;
+  padding: 20px;
+  margin-top: 20px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+.about-section {
+  padding: 50px;
+  text-align: center;
+  background-color:black;
+  color: white;
+}
+
+.container {
+  padding: 0 16px;
+  text-align: center;
+}
+
+.container::after, .row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.title {
+  color: grey;
+  text-align: center;
+}
+
+.button {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: white;
+  background-color: black;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+}
+
+.button:hover {
+  background-color:grey;
+}
+
+.container {
+border-radius: 5px;
+background-color: #f2f2f2;
+padding: 0 16px;
+position:relative;
+display: table;
+}
+
+@media screen and (max-width: 600px) {
+  .column {
+    width: 100%;
+    display: block;
+    margin-bottom: 20px;
+  }
+}
+
+</style>
+    <!-- Javascript code for navbar-->
+<script>
+    $(document).on("scroll", function(){
+      if
+    ($(document).scrollTop() > 86){
+        $("#banner").addClass("shrink");
+      }
+      else
+      {
+          $("#banner").removeClass("shrink");
+      }
+  });
+</script>
+
+<!--Navbar will be inside head-->
+<nav class="navbar navbar-expand-lg navbar-light fixed-top" id="banner">
+	<div class="container-fluid">
+  
+    <!-- Brand -->
+  <a class="navbar-brand" href="index.html"><span>CCan</span> Photography.</a>
+
+  <!-- Toggler/collapsibe Button -->
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <!-- Navbar links -->
+  <div class="collapse navbar-collapse" id="collapsibleNavbar">
+    <ul class="navbar-nav container-xl">
+      <li class="nav-item">
+        <a class="nav-link" href="index.html">HOME</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="Blog.html">BLOG</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="Gallery.html">GALLERY</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="About.html">ABOUT US</a>
+      </li> 
+      <li class="nav-item">
+        <a class="nav-link" href="Contact.html">CONTACT</a>
+      </li> 
+    </ul>
+  </div>
+	</div>
+</nav>
+
+
+  </head>
+
+  <body>
+      <br>
+      <br>
+      <br>
+      <br>
+      <!--About Us page-->
+    <section>
+    <div class="about-section">
+      
+        <h1>About Us</h1>
+        <p>Some text about who we are and what we do.</p>
+        <p>Resize the browser window to see that this page is responsive by the way.</p>
+      </div>
+<br>
+<br>
+    </section>
+    <section>
+    <!-- grid code starts here -->
+    <div class="container">
+      <hr class="w-50 mx-auto pt-2">
+        <div class="row">  <!-- teel the computer that have row in a grid-->
+            <div class="col"> <!-- this make your screen responsive on large/medium/small screens -->
+            <img src="Images/8.jpg" class="img-fluid" width="400" height="320"></div>
+        <div class="col">
+          <h1> Our Vision </h1>
+          <br>
+            <p> We specialize in wedding photography, corporate, family and senior portraits, often traveling to your destination to capture the perfect moment in the perfect place. 
+              From the shores here in Lake Geneva to the beaches of Lake Michigan in Milwaukee and Chicago and beyond. 
+              We will be there with you every step of the way to guarantee your special moments are captured for all time.<span id="dots1">...</span><span id="more1"> 
+                To us photography is about people being real and then letting us paint a picture of that moment to remember it forever. 
+                This is the story that matters most: real people, real stories, real moments.</span></p>
+        <button type="button" class="btn btn-block btn-dark"onclick="myFunction1()" id="myBtn1">Read more</button>
+        
+        <style>
+          #more1 {display: none;}
+          </style>
+          
+          <!-- javascript code for read more button -->
+          <script>
+          function myFunction1() {
+            var dots = document.getElementById("dots1");
+            var moreText = document.getElementById("more1");
+            var btnText = document.getElementById("myBtn1");
+          
+            if (dots.style.display === "none") {
+              dots.style.display = "inline";
+              btnText.innerHTML = "Read more";
+              moreText.style.display = "none";
+            } else {
+              dots.style.display = "none";
+              btnText.innerHTML = "Read less";
+              moreText.style.display = "inline";
+            }
+          }
+          </script>
+        </div>
+        </div>
+    </div>
+      </section>
+        
+<br>
+<br>
+
+<section>
+<div class="container">
+  <hr class="w-50 mx-auto pt-2">
+        <div class="row">  <!-- teel the computer that have row in a grid-->
+          <div class="col">
+        <h1> Our Approch </h1>
+        <br>
+          <p> We are incredibly blessed to have a team of photographers who work with us on any given weekend. Please take a few minutes to get to know us.<span id="dots2">...</span><span id="more2"> 
+            We would love to visit with you by phone or in person and talk about your wedding, event, portrait session or video project. Please reach out to us through the Contact Page.</span></p>
+          <button type="button" class="btn btn-block btn-dark"onclick="myFunction2()" id="myBtn2">Read more</button></div>
+          <div class="col"> <!-- this make your screen responsive on large/medium/small screens -->
+      <img src="Images/9.jpg" class="img-fluid" width="400" height="320">
+      
+      <style>
+        #more2 {display: none;}
+        </style>
+        
+        <!-- javascript code for read more button -->
+        <script>
+        function myFunction2() {
+          var dots = document.getElementById("dots2");
+          var moreText = document.getElementById("more2");
+          var btnText = document.getElementById("myBtn2");
+        
+          if (dots.style.display === "none") {
+            dots.style.display = "inline";
+            btnText.innerHTML = "Read more";
+            moreText.style.display = "none";
+          } else {
+            dots.style.display = "none";
+            btnText.innerHTML = "Read less";
+            moreText.style.display = "inline";
+          }
+        }
+        </script>
+      </div>
+      </div>
+</div>
+
+</section>
+
+<br>
+<br>
+
+<section>
+  <div class="container">
+    <hr class="w-50 mx-auto pt-2">
+      <div class="row">  <!-- teel the computer that have row in a grid-->
+        <div class="col"> <!-- this make your screen responsive on large/medium/small screens -->
+        <img src="Images/10.jpg" class="img-fluid" width="400" height="320"></div>
+    <div class="col">
+      <h1> Our Process </h1>
+      <br>
+        <p> We (and our guests) were blown away by the My-Life Montage at the wedding, showing photos we had taken a mere three hours before looking beautiful for everyone to enjoy. 
+          So many people have asked for Matt’s info for their upcoming weddings!<span id="dots">...</span><span id="more"> 
+            I CANNOT contain my enthusiasm and respect for Matt and his assistants that day, they were so professional and engaging! 
+            While Matt Mason photography is certainly not a “budget” photography company, trust me when I say I’d have paid 3x the amount as I now have photos I will treasure for the rest of my life!.</span></p>
+    <button type="button" class="btn btn-block btn-dark"onclick="myFunction()" id="myBtn">Read more</button>
+    
+    <style>
+      #more {display: none;}
+      </style>
+      
+      <!-- javascript code for read more button -->
+      <script>
+      function myFunction() {
+        var dots = document.getElementById("dots");
+        var moreText = document.getElementById("more");
+        var btnText = document.getElementById("myBtn");
+      
+        if (dots.style.display === "none") {
+          dots.style.display = "inline";
+          btnText.innerHTML = "Read more";
+          moreText.style.display = "none";
+        } else {
+          dots.style.display = "none";
+          btnText.innerHTML = "Read less";
+          moreText.style.display = "inline";
+        }
+      }
+      </script>
+    </div>
+    </div>
+  </div>
+</section>
+      
+<br>
+<br>
+<section>
+      <h1 class="text-center pt-1" >Our Team</h1>
+      <hr class="w-50 mx-auto pt-2">
+    
+      <div class="row mx-auto d-flex justify-content-center">
+
+        <div class="col-lg-3">
+          <div class="card">
+            <img src="Images/1.1.jpg" alt="Jane" class="img-fluid">
+            <div class="container">
+              <h2>Peter Doe</h2>
+              <p class="title">CEO & Founder</p>
+              <p>Some text that describes me lorem ipsum ipsum lorem.</p>
+              <p>peter@ccan.com</p>
+              <p><button class="button" onclick="window.location.href='Contact.html';">Contact</button></p>
+            </div>
+          </div>
+        </div>
+      
+        <div class="col-lg-3">
+          <div class="card">
+            <img src="Images/2.2.jpg" alt="Mike" class="img-fluid">
+            <div class="container">
+              <h2>Mike Ross</h2>
+              <p class="title">Art Director</p>
+              <p>Some text that describes me lorem ipsum ipsum lorem.</p>
+              <p>mike@ccan.com</p>
+              <p><button class="button" onclick="window.location.href='Contact.html';">Contact</button></p>
+            </div>
+          </div>
+        </div>
+    
+        <div class="col-lg-3">
+          <div class="card" >
+            <img src="Images/4.4.jpg" alt="John" class="img-fluid">
+            <div class="container">
+              <h2>John Doe</h2>
+              <p class="title">Photographer</p>
+              <p>Some text that describes me lorem ipsum ipsum lorem.</p>
+              <p>john@ccan.com</p>
+              <p><button class="button" onclick="window.location.href='Contact.html';">Contact</button></p>
+            </div>
+          </div>
+        </div>
+      
+      </div>
+   </section>
+<br>
+<br>
+
+     <!-- Footer -->
+     <section>
+        <style>
+          .footer1 {
+            position:sticky;
+            left: 0;
+            bottom:0;
+            width: 100%;
+            background-color: black;
+            color: white;
+            text-align: center;
+            padding-top: 30px;
+            padding-bottom: 30px;
+          }
+          </style>
+          
+          <!-- css code for social media buttons -->
+          
+          <div class="footer1">
+            <p style="text-align: center;">All right reserved. Copy right 2020</p>
+          
+          <style>
+          .fa {
+            padding: 15px;
+            font-size:20px;
+            width:60px;
+            text-align: center;
+            text-decoration: none;
+            margin: 5px 5px;
+            
+          }
+          
+          .fa:hover {
+              opacity: 0.7;
+          }
+          
+          .fa-facebook {
+            background: #3B5998;
+            color: white;
+          }
+          
+          .fa-google {
+            background: #dd4b39;
+            color: white;
+          }
+          
+          .fa-youtube {
+            background: #bb0000;
+            color: white;
+          }
+          
+          .fa-instagram {
+            background: #125688;
+            color: white;
+          }
+          
+          </style>
+          <!-- html code for social media -->
+          <!-- Add font awesome icons -->
+          <a href="#" class="fa fa-facebook"></a>
+          <a href="#" class="fa fa-google"></a>
+          <a href="#" class="fa fa-youtube"></a>
+          <a href="#" class="fa fa-instagram"></a>
+          
+          </div>
+          </section>
+  </body>
+  </html>
